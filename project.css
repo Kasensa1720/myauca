@@ -1,0 +1,283 @@
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; 
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+header, footer {
+  background-color: #192233;
+  color: white;
+  padding: 10px;
+}
+
+button {
+  background-color: #357edd;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #0070f0;
+  box-shadow: 0px 0px 15px 5px #0070f0;
+  transform: scale(1.05);
+}
+
+
+.header {
+  display: flex;
+  flex-direction: row; 
+  justify-content: space-between;
+  align-items: center; 
+  height: 100px; 
+  padding: 0 20px; 
+}
+
+.header-logo {
+  width: 50px;
+  height: 100px;
+}
+
+.header-logo img {
+  width: 120px;
+  height: 110px;
+  display: block;
+}
+
+.header-links {
+  display: flex; 
+  align-items: center; 
+}
+
+.header-links a {
+  margin: 0 15px; 
+  font-size: 1.1rem; 
+  color: white;
+  text-transform: uppercase; 
+  font-weight: bold; 
+  transition: color 0.3s ease; 
+}
+
+.header-links a:hover {
+  color: #0070f0; 
+}
+
+
+
+
+
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 20px;
+  background: linear-gradient(270deg, #1f2937, #28374d, #356684, #8fa1b2);
+  background-size: 400% 400%;
+  animation: gradientAnimation 10s ease infinite;
+  color: white;
+}
+
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.hero-text h1 {
+  margin-top: 10px;
+  font-size: 2.5rem;
+  /* background: linear-gradient( 100deg, #ff0000, #ab1818 );
+ -webkit-background-clip: text;
+color: transparent;   */
+}
+
+.hero-text p {
+  margin: 0px;
+  font-size: 16px;
+  color: #cbd5e1;
+}
+
+.hero-image img {
+  width: 450px;
+  height: 300px;
+  border-radius: 8px;
+  animation: drift 3s infinite ease-in-out;
+}
+
+@keyframes drift {
+  0%, 100% { transform: translateX(0) rotate(0); }
+  50% { transform: translateX(10px) rotate(2deg); }
+}
+
+
+
+@keyframes puff {
+  0% { transform: scale(1); opacity: 0.5; }
+  100% { transform: scale(1.5); opacity: 0; }
+}
+
+
+.info {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.info h2 {
+  margin-bottom: 30px;
+  font-size: 2rem;
+  color: #192233; 
+}
+
+
+.info-cards {
+  display: flex;
+  justify-content: center; 
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 20px 0;
+}
+
+
+.card {
+  width: 250px; 
+  text-align: center;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 1px;
+  box-shadow: 0 4px 12px rgba(0, 56, 240, 0.1); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 5px;
+}
+
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+
+.card:hover {
+  transform: translateY(-10px); 
+  box-shadow: 0 8px 20px rgba(0, 55, 255, 0.737);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.card h3 {
+  font-size: 1.2rem;
+  color: #192233; 
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+
+.card:hover {
+  background-color: #f3f4f6;
+}
+
+
+.card .card-content {
+  transition: opacity 0.3s ease;
+}
+
+.card:hover .card-content {
+  opacity: 0.9;
+}
+
+
+.quote {
+  background-color: #4a4b4d;
+  padding: 40px 20px;
+  text-align: center;
+  font-style: italic;
+  font-size: larger;
+  color: white;
+}
+
+.quote cite {
+  display: block;
+  margin-top: 20px;
+  font-style: normal;
+  font-weight: bold;
+}
+
+
+.cta {
+  background-color: #2563eb;
+  padding: 40px 20px;
+  display: flex;
+  border-radius: 8px;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+}
+
+.cta-title {
+  color: white;
+  text-align: left;
+  font-size: 16px;
+}
+
+.cta-description {
+  color: rgb(193, 193, 193);
+  text-align: left;
+  font-size: 14px;
+}
+
+.left-cta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+}
+
+.right-cta {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.btn {
+  animation: neonGlow 2s infinite alternate;
+  margin-top: 20px;
+}
+
+@keyframes neonGlow {
+  0% { box-shadow: 0 0 5px #0070f0, 0 0 10px #0070f0; }
+  100% { box-shadow: 0 0 20px #0070f0, 0 0 30px #004080; }
+}
+
+
+.footer {
+  text-align: center;
+  padding: 10px;
+  font-size: 14.4px;
+}
